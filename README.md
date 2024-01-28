@@ -1,27 +1,37 @@
 # CodexAstra
 CodexAstra is a Visual Studio Extension designed to enhance your coding experience through AI-assisted interactions. Engage in intelligent conversations with AI agents that provide real-time assistance directly within your IDE.
 
+<img src="Resources/CodexAstraHomePageOverview.png" alt="CodexAstra Home Page Overview" height="400"/>
+<img src="Resources/CodexAstraChatExample.png" alt="CodexAstra Chat Example" height="400"/>
+
 ## Features
-- **AI-Powered Chat**: Interact with AI agents to gain insight and assistance with your coding tasks.
-- **Agent-Based Support**: Leverage a variety of agents, each specialized in different aspects of software development.
-- **Visual Studio Integration**: Enjoy a seamless experience that brings AI capabilities right into your development workflow.
-- **Bring your own deployment** No data leaves your Azure AI instance.
-  
+- **AI-Powered Chat**: Interact with AI agents to gain insight and assistance with your coding tasks. Use the chat window within Visual Studio to ask questions and receive guidance.
+
+- **Agent-Based Support**: Leverage a variety of agents, each specialized in different aspects of software development. Choose the agent that best suits the task at hand.
+
+- **Visual Studio Integration**: Enjoy a seamless experience that brings AI capabilities right into your development workflow. Codex Astra integrates directly into Visual Studio, making it easily accessible.
+
+- **Bring Your Own Deployment**: Maintain confidentiality and control over your data with the ability to deploy Codex Astra to your own Azure AI instance. No data leaves your instance, ensuring privacy and security.
+
+![CodexAstra Chat in Visual Studio Example](Resources/CodexAstraChatVisualStudioExample.png)
+
 ## Getting Started
 To start using CodexAstra, follow these simple installation steps:
 
-1. Ensure you have Visual Studio installed on your machine.
-2. Download `CodexAstra.vsix` from the latest release.
-3. Double-click the downloaded file to install the extension in Visual Studio.
+1. Open Visual Studio.
+2. Go to Extensions -> Manage Extensions.
+3. Search for "CodexAstra" and click "Download" or "Install".
+4. Restart Visual Studio if prompted.
 
-If you're updating the extension remember to uninstall it from Visual Studio before you try to install a newer version
+Once installed, open Visual Studio, and you’ll find CodexAstra in the toolbar:
 
-Once installed, open Visual Studio and you’ll find CodexAstra in the toolbar:
 - Find the window under View -> Other Windows -> Codex Astra (or Ctrl+Q -> "Codex Astra")
-- Configure your settings by clicking the settings icon next to the title
 
-Click new chat to start a coding related chat or the dropdown for specific tasks.
+- Configure your settings by clicking the settings icon next to the title.
 
+![CodexAstra Settings Example](Resources/CodexAstraSettingsExample.png)
+
+Click "New Chat" to start a coding-related chat or use the dropdown to select specific tasks.
 ### Daily Usage
 
 Codex Astra is designed to streamline your development workflow by facilitating an interactive and productive dialogue with your codebase and development environment. Below are common daily usage scenarios that describe how to interact with and leverage the capabilities of Codex Astra effectively.
@@ -72,21 +82,6 @@ To make the most of your day with Codex Astra, here are some best practices:
 
 By incorporating these steps into your daily routine, you'll enhance your productivity, reduce manual overhead, and make your development process more efficient and enjoyable. Codex Astra is here to help you every step of the way, from planning to coding to documentation.
 ### Technical Usage
-#### Function Interaction Guide Using Natural Language Prompts
-
-Interacting with CodexAstra functions can be done using specific language cues. The following table outlines possible natural language prompts and the function each will trigger:
-
-| Natural Language Prompt                 | Function                        | Action                                         |
-|-----------------------------------------|---------------------------------|------------------------------------------------|
-| "Create a new file for Project X"       | `CreateFileInProjectFunction`   | This would initiate a new file creation in the specified project. |
-| "Run this code snippet with X args"     | `ExecuteCodeFunction`           | Code execution with provided arguments would be triggered. |
-| "Look at my XXXX class"                 | `FindCodeFunction`              | Searches for the specified class named `XXXX` in the codebase. |
-| "Find my function named YYYYY"          | `FindCodeFunction`              | Locates the `YYYYY` function within the codebase. |
-| "Get the latest errors"                 | `GetErrorsFromVisualStudioFunction` | Retrieves the most recent errors from Visual Studio's error list. |
-| "What's the last exception?"            | `GetLastExceptionFunction`      | Captures the details of the last thrown exception. |
-| "Show recent debug output"              | `GetRecentMessagesFromAllOutputPanesFunction` | Fetches recent messages from the Debug output window. |
-| "Replace ZZZZ with AAAA everywhere"     | `ReplaceCodeFunction`           | Replaces all instances of `ZZZZ` in the codebase with `AAAA`. |
-| "I need a new console app named BBBB"   | `CreateProjectInSolutionFunction` | Requests the creation of a new ConsoleApp project with the name `BBBB`. |
 
 #### Example Usage Scenarios
 
@@ -119,31 +114,3 @@ To optimize your interaction, ensure that your prompts:
 
 By following these guidelines, you can streamline your work process and effectively leverage the capabilities of the CodexAstra functions.
 
-ReflectAndInvokeFunction Usage
-
-The `ReflectAndInvokeFunction` enables the dynamic execution of methods within the Visual Studio environment through reflection. It allows for flexible interaction with the Visual Studio automation APIs by calling methods without the need for direct function prompts.
-
-Triggering ReflectAndInvokeFunction
-
-To utilize the `ReflectAndInvokeFunction`, you would phrase your prompt to reflect an intention to perform an action using reflection. Here are examples of natural language that would lead to the use of this function:
-
-Natural Language Prompt | Function | Action
----|---|---
-"Can you execute the GetCurrentSelection method?" | `ReflectAndInvokeFunction` | Calls the `GetCurrentSelection` method from the `VisualStudioEnvironmentHelper` class using reflection.
-"Could you please run the SaveAll command in Visual Studio?" | `ReflectAndInvokeFunction` | Executes the `SaveAllAsync` method ensuring all files are saved within the current Visual Studio session.
-"I need to fetch the structure of the current solution." | `ReflectAndInvokeFunction` | Invokes the `GetSolutionStructureAsync` method to obtain a summary of the current solution's architecture.
-
-Example Usage Scenario
-
-Dynamic Method Invocation
-User Prompt: "Can you save all open documents in the current session?"
-Action: `ReflectAndInvokeFunction` would be chosen to call the `SaveAllAsync` method, saving any open documents in Visual Studio.
-
-Tips for Using ReflectAndInvokeFunction
-
-- Method Name: Specify the method name exactly as it appears within the `VisualStudioEnvironmentHelper` or the relevant namespace when prompting for the function.
-- Availability: Confirm the method you wish to call is available in the VisualStudioEnvironmentHelper toolkit, and that it can be accessed through reflection.
-- Parameters: If the target method requires parameters, state them clearly. For example: "Please invoke the OpenDocumentAsync method with the file path parameter set to 'C:\\MyProject\\Program.cs'."
-- Return Type: Consider how you'll handle the method's return type, as some methods may return asynchronous `Task` objects that require awaiting, while others might provide immediate results.
-
-The `ReflectAndInvokeFunction` is a flexible tool for automating a variety of tasks within Visual Studio, assuming familiarity with the methods' signatures and return types.
