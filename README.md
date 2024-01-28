@@ -1,8 +1,10 @@
 # CodexAstra
 CodexAstra is a Visual Studio Extension designed to enhance your coding experience through AI-assisted interactions. Engage in intelligent conversations with AI agents that provide real-time assistance directly within your IDE.
 
-<img src="Resources/CodexAstraHomePageOverview.png" alt="CodexAstra Home Page Overview" height="400"/>
-<img src="Resources/CodexAstraChatExample.png" alt="CodexAstra Chat Example" height="400"/>
+<div style="display: flex; justify-content: space-between;">
+    <img src="Resources/CodexAstraHomePageOverview.png" alt="CodexAstra Home Page Overview" height="400"/>
+    <img src="Resources/CodexAstraChatExample.png" alt="CodexAstra Chat Example" height="400"/>
+</div>
 
 ## Features
 - **AI-Powered Chat**: Interact with AI agents to gain insight and assistance with your coding tasks. Use the chat window within Visual Studio to ask questions and receive guidance.
@@ -42,11 +44,15 @@ When you start your day, you might want to get the details of a specific work it
 - Use a prompt like "Get details for work item #12345."
 - Codex Astra will fetch all the relevant details, facilitating your planning for the day.
 
+![Get Work Item Example](Resources/GetWorkItemExample.gif)
+
 #### Retrieve Existing Code
 Before making changes, you may need to review existing code. Codex Astra can help by locating the code associated with a specific class or method:
 
 - Phrase your request as "Show me the code for the `PaymentProcessor` class."
 - Codex Astra will use its code search function to retrieve the source code, enabling you to proceed with informed changes.
+
+![Find Code Example](Resources/SimpleCodeLookupExample.gif)
 
 #### Implement Changes
 Once you've reviewed the work items and existing code, you might want Codex Astra to assist with implementing changes:
@@ -71,6 +77,9 @@ Good commit messages are crucial for maintainable version control history. Codex
 
 - Instruct it with "Create a commit message for the changes made in `PaymentProcessor` based on task #12345."
 - Use the generated message to commit your changes, ensuring your commit logs are informative and traceable to specific work items.
+
+![Get Git Changes Example](Resources/GitChangesExample.gif)
+
 
 #### Best Practices
 To make the most of your day with Codex Astra, here are some best practices:
