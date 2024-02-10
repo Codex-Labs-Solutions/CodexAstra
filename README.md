@@ -2,8 +2,8 @@
 CodexAstra is a Visual Studio Extension designed to enhance your coding experience through AI-assisted interactions. Engage in intelligent conversations with AI agents that provide real-time assistance directly within your IDE.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="Resources/CodexAstraHomePageOverview.png" alt="CodexAstra Home Page Overview" height="400"/>
-    <img src="Resources/CodexAstraChatExample.png" alt="CodexAstra Chat Example" height="400"/>
+    <img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/CodexAstraHomePageOverview.png" alt="CodexAstra Home Page Overview" height="400"/>
+    <img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/CodexAstraChatExample.png" alt="CodexAstra Chat Example" height="400"/>
 </div>
 
 ## Features
@@ -15,7 +15,7 @@ CodexAstra is a Visual Studio Extension designed to enhance your coding experien
 
 - **Bring Your Own Deployment**: Maintain confidentiality and control over your data with the ability to deploy Codex Astra to your own Azure AI instance. No data leaves your instance, ensuring privacy and security.
 
-![CodexAstra Chat in Visual Studio Example](Resources/CodexAstraChatVisualStudioExample.png)
+<img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/CodexAstraChatVisualStudioExample.png" alt="CodexAstra Chat in Visual Studio Example" />
 
 ## Getting Started
 To start using CodexAstra, follow these simple installation steps:
@@ -31,9 +31,10 @@ Once installed, open Visual Studio, and you’ll find CodexAstra in the toolbar:
 
 - Configure your settings by clicking the settings icon next to the title.
 
-![CodexAstra Settings Example](Resources/CodexAstraSettingsExample.png)
+<img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/CodexAstraSettingsExample.png" alt="CodexAstra Settings Example" />
 
 Click "New Chat" to start a coding-related chat or use the dropdown to select specific tasks.
+
 ### Daily Usage
 
 Codex Astra is designed to streamline your development workflow by facilitating an interactive and productive dialogue with your codebase and development environment. Below are common daily usage scenarios that describe how to interact with and leverage the capabilities of Codex Astra effectively.
@@ -44,7 +45,7 @@ When you start your day, you might want to get the details of a specific work it
 - Use a prompt like "Get details for work item #12345."
 - Codex Astra will fetch all the relevant details, facilitating your planning for the day.
 
-![Get Work Item Example](Resources/GetWorkItemExample.gif)
+<img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/GetWorkItemExample.gif" alt="Get Work Item Example" />
 
 #### Retrieve Existing Code
 Before making changes, you may need to review existing code. Codex Astra can help by locating the code associated with a specific class or method:
@@ -52,7 +53,7 @@ Before making changes, you may need to review existing code. Codex Astra can hel
 - Phrase your request as "Show me the code for the `PaymentProcessor` class."
 - Codex Astra will use its code search function to retrieve the source code, enabling you to proceed with informed changes.
 
-![Find Code Example](Resources/SimpleCodeLookupExample.gif)
+<img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/SimpleCodeLookupExample.gif" alt="Find Code Example" />
 
 #### Implement Changes
 Once you've reviewed the work items and existing code, you might want Codex Astra to assist with implementing changes:
@@ -78,8 +79,7 @@ Good commit messages are crucial for maintainable version control history. Codex
 - Instruct it with "Create a commit message for the changes made in `PaymentProcessor` based on task #12345."
 - Use the generated message to commit your changes, ensuring your commit logs are informative and traceable to specific work items.
 
-![Get Git Changes Example](Resources/GitChangesExample.gif)
-
+<img src="https://github.com/Codex-Labs-Solutions/CodexAstra/raw/main/Resources/GitChangesExample.gif" alt="Get Git Changes Example" />
 
 #### Best Practices
 To make the most of your day with Codex Astra, here are some best practices:
